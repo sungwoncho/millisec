@@ -1,0 +1,19 @@
+{
+  "name": "millisec",
+  "version": "0.1.0",
+  "description": "Prettify milliseconds with customizable format",
+  "main": "lib/millisec.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sungwoncho/millisec.git"
+  },
+  "author": "Sung Won Cho <mikeswcho@gmail.com> (https://sungwoncho.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
