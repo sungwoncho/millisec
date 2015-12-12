@@ -12,9 +12,7 @@ Turn milliseconds into a human readable and customizable format.
 
 ```js
 var millisec = require('millisec');
-
-// 1 day 2 hours 3 minutes 11.334 seconds
-var ms = 93791334;
+var ms = 93791334; // 1 day 2 hours 3 minutes 11.334 seconds
 
 millisec(ms).format('DD - HH - MM - SS');
 // => '1 day - 2 hours - 3 minutes - 11 seconds'
@@ -45,6 +43,68 @@ given format.
   ...)
 * `SS` - seconds followed by a count noun (e.g. 0 seconds, 1 second, 2 seconds,
   ...)
+
+```js
+var millisec = require('millisec');
+var ms = 93791334; // 1 day 2 hours 3 minutes 11.334 seconds
+
+millisec(ms).format('HH MM SS');
+// => '2 hours 3 minutes 11 seconds'
+millisec(ms).format('DAY (dd) HOURS (hh) MINUTES (mm)');
+// => 'DAY (1) HOURS (2) MINUTES (3)'
+```
+
+### getDays
+
+Get the day component of the millisecond. The returned value is `Number`, not
+a `String`. Returns `0` if the millisecond is less than one day.
+
+```js
+var millisec = require('millisec');
+var ms = 93791334; // 1 day 2 hours 3 minutes 11.334 seconds
+
+millisec(ms).getDays();
+// => 1
+```
+
+### getHours
+
+Get the hour component of the millisecond. The returned value is `Number`, not
+a `String`. If the millisecond is less than one hour, returns `0`.
+
+```js
+var millisec = require('millisec');
+var ms = 93791334; // 1 day 2 hours 3 minutes 11.334 seconds
+
+millisec(ms).getHours();
+// => 2
+```
+
+### getMinutes
+
+Get the minute component of the millisecond. The returned value is `Number`, not
+a `String`. If the millisecond is less than one minute, returns `0`.
+
+```js
+var millisec = require('millisec');
+var ms = 93791334; // 1 day 2 hours 3 minutes 11.334 seconds
+
+millisec(ms).getMinutes();
+// => 3
+```
+
+### getSeconds
+
+Get the second component of the millisecond. The returned value is `Number`, not
+a `String`. The decimals are ignored.
+
+```js
+var millisec = require('millisec');
+var ms = 93791334; // 1 day 2 hours 3 minutes 11.334 seconds
+
+millisec(ms).getSeconds();
+// => 11
+```
 
 ## Contributing
 
