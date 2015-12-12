@@ -9,8 +9,9 @@ Turn milliseconds into a human readable and customizable format.
 ## Usage
 
 ```js
-// 1 day 2 hours 3 minutes 11.334 seconds
 var millisec = require('millisec');
+
+// 1 day 2 hours 3 minutes 11.334 seconds
 var ms = 93791334;
 
 millisec(ms).format('DD - HH - MM - SS');
