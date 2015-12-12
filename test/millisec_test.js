@@ -70,6 +70,54 @@ describe("millisec", function() {
       expect(output).to.equal('11 seconds');
     });
 
+    it("can output the hour equivalent", function() {
+      var output = millisec(TEST_INPUT).format('hhh');
+      expect(output).to.equal('26');
+    });
+
+    it("can output the minute equivalent", function() {
+      var output = millisec(TEST_INPUT).format('mmm');
+      expect(output).to.equal('1563');
+    });
+
+    it("can output the seconds equivalent", function() {
+      var output = millisec(TEST_INPUT).format('sss');
+      expect(output).to.equal('93791');
+    });
+
+    it("can output the hour equivalent with pluralized hours", function() {
+      var output = millisec(TEST_INPUT).format('HHH');
+      expect(output).to.equal('26 hours');
+    });
+
+    it("can output the hour equivalent with singularized hours", function() {
+      var ONE_HOUR = 3600000;
+      var output = millisec(ONE_HOUR).format('HHH');
+      expect(output).to.equal('1 hour');
+    });
+
+    it("can output the minute equivalent with pluralized minutes", function() {
+      var output = millisec(TEST_INPUT).format('MMM');
+      expect(output).to.equal('1563 minutes');
+    });
+
+    it("can output the minute equivalent with singularized minutes", function() {
+      var ONE_MINUTE = 60000;
+      var output = millisec(ONE_MINUTE).format('MMM');
+      expect(output).to.equal('1 minute');
+    });
+
+    it("can output the second equivalent with pluralized seconds", function() {
+      var output = millisec(TEST_INPUT).format('SSS');
+      expect(output).to.equal('93791 seconds');
+    });
+
+    it("can output the second equivalent with singularized seconds", function() {
+      var ONE_SECOND = 1000;
+      var output = millisec(ONE_SECOND).format('SSS');
+      expect(output).to.equal('1 second');
+    });
+
     it("can output combination of formats", function() {
       var format = 'dd - HH MM SS';
       var output = millisec(TEST_INPUT).format(format);

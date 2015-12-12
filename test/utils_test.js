@@ -49,4 +49,28 @@ describe("utils", function() {
       expect(days).to.equal(1);
     });
   });
+
+  describe("#turnMsToSeconds", function() {
+    it("turns millisecond to second", function() {
+      var SIXTY_SECONDS = 60000;
+      var seconds = utils.turnMsToSeconds(SIXTY_SECONDS);
+      expect(seconds).to.equal(60);
+    });
+  });
+
+  describe("#turnMsToMinutes", function() {
+    it("turns millisecond to second", function() {
+      var TWO_MINUTES = 120000;
+      var minutes = utils.turnMsToMinutes(TWO_MINUTES);
+      expect(minutes).to.equal(2);
+    });
+  });
+
+  describe("#turnMsToDays", function() {
+    it("turns millisecond to second", function() {
+      var TWO_DAYS = 172800000;
+      var days = utils.turnMsToDays(TWO_DAYS);
+      expect(days).to.equal(2);
+    });
+  });
 });

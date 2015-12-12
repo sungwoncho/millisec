@@ -33,16 +33,32 @@ given format.
 
 `output` is a required argument.
 
-* `dd` - raw days (e.g. 1, 2, ...)
-* `hh` - raw hours (e.g. 2, 14, ...)
-* `mm` - raw minutes (e.g. 3, 30, ...)
-* `ss` - raw seconds (e.g. 1, 15, ...)
+* `dd` - raw days (e.g. 0, 1, 2, ...)
+* `hh` - raw hours with a maximum value `23`. (e.g. 0, 1, 2, ..., 23)
+* `mm` - raw minutes with a maximum value `59`. (e.g. 0, 1, 2, ..., 59)
+* `ss` - raw seconds with maximum value `59`. (e.g. 0, 1, 2, ..., 59)
+
 * `DD` - days followed by a count noun (e.g. 0 days, 1 day, 2 days, ...)
-* `HH` - hours followed by a count noun (e.g. 0 hours, 1 hour, 2 hours, ...)
-* `MM` - minutes followed by a count noun (e.g. 0 minutes, 1 minute, 2 minutes,
-  ...)
-* `SS` - seconds followed by a count noun (e.g. 0 seconds, 1 second, 2 seconds,
-  ...)
+* `HH` - hours followed by a count noun. The maximum value is `23`.
+ (e.g. 0 hours, 1 hour, 2 hours, ...,  23 hours)
+* `MM` - minutes followed by a count noun. The maximum value is `59`.
+ (e.g. 0 minutes, 1 minute, 2 minutes, ..., 59 minutes)
+* `SS` - seconds followed by a count noun. The maximum value is `59`.
+(e.g. 0 seconds, 1 second, 2 seconds, ..., 59 seconds)
+
+* `hhh` - the hours equivalent of the millisecond
+(e.g. 0, 1, 2, 24, ..., 48, ...)
+* `mmm` - the minutes equivalent of the millisecond (e.g. 0, 1, 2, ...,
+   100, ...)
+* `sss` - the seconds equivalent of the millisecond (e.g. 0, 1, 2, ...,
+  3500, ...)
+
+* `HHH` - the hours equivalent of the millisecond, followed by a count noun
+(e.g. 0 hours, 1 hour, 2 hours, ...,  24 hours, ..., 48 hours)
+* `MMM` - the minutes equivalent of the millisecond, followed by a count noun
+ (e.g. 0 minutes, 1 minute, 2 minutes, ..., 100 minutes)
+* `SSS` - the seconds equivalent of the millisecond, followed by a count noun
+(e.g. 0 seconds, 1 second, 2 seconds, ..., 3500 seconds)
 
 ```js
 var millisec = require('millisec');
@@ -52,6 +68,10 @@ millisec(ms).format('HH MM SS');
 // => '2 hours 3 minutes 11 seconds'
 millisec(ms).format('DAY (dd) HOURS (hh) MINUTES (mm)');
 // => 'DAY (1) HOURS (2) MINUTES (3)'
+millisec(ms).format('MMM');
+// => '1563 minutes'
+millisec(ms).format('Seconds left: sss');
+// => 'Seconds left: 93791'
 ```
 
 ### getDays
