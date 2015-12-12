@@ -1,6 +1,6 @@
 # millisec
 
-Turn milliseconds into human readable, and customizable format.
+Turn milliseconds into a human readable and customizable format.
 
 ## Installation
 
@@ -14,7 +14,10 @@ var millisec = require('millisec');
 var ms = 93791334;
 
 millisec(ms).format('DD - HH - MM - SS');
-// => '1 day - 2 hours - 3 minutes - 11 seconds '
+// => '1 day - 2 hours - 3 minutes - 11 seconds'
+
+millisec(ms).format('hh : mm : ss');
+// => '2 : 3 : 11'
 ```
 
 ## Documentation
@@ -40,9 +43,9 @@ given format.
 * `SS` - seconds followed by a count noun (e.g. 0 seconds, 1 second, 2 seconds,
   ...)
 
-## Contribution guide
+## Contributing
 
-Please open issues with feature requests. Pull requests are welcomed.
+Run `npm test` to run tests locally.
 
 ## License
 
