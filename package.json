@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/sungwoncho/millisec.git"
   },
+  "keywords": [
+    "milliseconds",
+    "millisecond",
+    "format"
+  ],
   "author": "Sung Won Cho <mikeswcho@gmail.com> (https://sungwoncho.io/)",
   "license": "MIT",
   "devDependencies": {
