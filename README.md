@@ -33,7 +33,7 @@ given format.
 * `hh` - raw hours (e.g. 2, 14, ...)
 * `mm` - raw minutes (e.g. 3, 30, ...)
 * `ss` - raw seconds (e.g. 1, 15, ...)
-* `DD` - days followed by a count noun (e.g. 0 day, 1 day, 2 days, ...)
+* `DD` - days followed by a count noun (e.g. 0 days, 1 day, 2 days, ...)
 * `HH` - hours followed by a count noun (e.g. 0 hours, 1 hour, 2 hours, ...)
 * `MM` - minutes followed by a count noun (e.g. 0 minutes, 1 minute, 2 minutes,
   ...)
