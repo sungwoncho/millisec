@@ -1,5 +1,7 @@
 # millisec
 
+[![Build Status](https://travis-ci.org/sungwoncho/millisec.svg?branch=master)](https://travis-ci.org/sungwoncho/millisec)
+
 Turn milliseconds into a human readable and customizable format.
 
 ## Installation
