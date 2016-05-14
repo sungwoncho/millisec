@@ -1,6 +1,6 @@
 # millisec
 
-[![Build Status](https://travis-ci.org/sungwoncho/millisec.svg?branch=master)](https://travis-ci.org/sungwoncho/millisec) [![Vym](https://img.shields.io/badge/Reviewing%20with-Vym-blue.svg)](https://vym.io)
+[![Build Status](https://travis-ci.org/sungwoncho/millisec.svg?branch=master)](https://travis-ci.org/sungwoncho/millisec)
 
 Turn milliseconds into a human readable and customizable format.
 
